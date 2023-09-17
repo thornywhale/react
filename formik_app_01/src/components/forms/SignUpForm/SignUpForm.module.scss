@@ -1,0 +1,49 @@
+form {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.sixInputs {
+  margin: 20px auto;
+  width: 600px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.inputPair {
+  display: flex;
+  justify-content: center;
+}
+input {
+  margin: 6px 18px;
+  width: 270px;
+  height: 50px;
+}
+label {
+  margin: auto;
+  display: flex;
+  align-items: center;
+  width: 600px;
+  height: 120px;
+  border: 1px solid white;
+}
+.radioTextWrapper {
+  text-align: left;
+  color: white;
+  padding-left: 20px;
+}
+.radioTextWrapper > h4 {
+  font-size: small;
+  width: fit-content;
+}
+
+.submitBtn {
+  margin: 20px auto;
+  width: 602px;
+  height: 50px;
+  color: white;
+  background-color: #28d2d0;
+  border: none;
+  border-radius: 5px;
+  font-weight: 900;
+}

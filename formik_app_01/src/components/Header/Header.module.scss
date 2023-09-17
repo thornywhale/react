@@ -1,0 +1,28 @@
+header {
+  display: flex;
+  justify-content: space-between;
+  margin: 40px;
+}
+.headerBtn {
+  width: 80px;
+  height: 40px;
+  text-transform: uppercase;
+  font-weight: 900;
+  color: white;
+  background-color: transparent;
+  border: 1px solid white;
+  border-radius: 5px;
+}
+.headerBtn:hover {
+  animation-name: stretchLeft;
+  animation-duration: 0.4s;
+  @keyframes stretchLeft {
+    from {
+      width: 80px;
+    }
+    to {
+      width: 90px;
+    }
+  }
+  width: 90px;
+}
