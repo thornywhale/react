@@ -1,6 +1,6 @@
 import React from "react";
 import PropTypes from "prop-types";
-import { Formik, Form } from "formik";
+import { Formik, Form, ErrorMessage } from "formik";
 
 import { SIGN_UP_SCHEME } from "../../../utils/validationSchemes";
 import InputText from "./../InputText";
@@ -10,10 +10,14 @@ import styles from "./SignUpForm.module.scss";
 const initialValues = {
   email: "",
   password: "",
+  passwordConf: "",
   role: "",
+  firstName: "",
+  lastName: "",
+  displayName: "",
 };
 
-const SignUpForm = () => {
+const SignUpForm = (props) => {
   const onSubmit = (values, formikBag) => {
     console.log(values);
     formikBag.resetForm();
@@ -27,49 +31,113 @@ const SignUpForm = () => {
       <Form>
         <section className={styles.sixInputs}>
           <section className={styles.inputPair}>
-            <InputText name="first-name" type="text" placeholder="First name" />
-            <InputText name="last-name" type="text" placeholder="Last name" />
+            <section className={styles.inputWrapper}>
+              <InputText
+                name="firstName"
+                type="text"
+                placeholder="First name"
+              />
+              <ErrorMessage
+                name="firstName"
+                component="div"
+                className={styles.errorText}
+              />
+            </section>
+            <section className={styles.inputWrapper}>
+              <InputText name="lastName" type="text" placeholder="Last name" />
+              <ErrorMessage
+                name="lastName"
+                component="div"
+                className={styles.errorText}
+              />
+            </section>
           </section>
           <section className={styles.inputPair}>
-            <InputText
-              name="display-name"
-              type="text"
-              placeholder="Display name"
-            />
-            <InputText name="email" type="email" placeholder="Email Address" />
+            <section className={styles.inputWrapper}>
+              <InputText
+                name="displayName"
+                type="text"
+                placeholder="Display name"
+              />
+              <ErrorMessage
+                name="displayName"
+                component="div"
+                className={styles.errorText}
+              />
+            </section>
+            <section className={styles.inputWrapper}>
+              <InputText
+                name="email"
+                type="email"
+                placeholder="Email Address"
+              />
+              <ErrorMessage
+                name="email"
+                component="div"
+                className={styles.errorText}
+              />
+            </section>
           </section>
           <section className={styles.inputPair}>
-            <InputText
-              name="password-conf"
-              type="password"
-              placeholder="Password"
-            />
-            <InputText
-              name="password"
-              type="password"
-              placeholder="Password Confirmation"
-            />
+            <section className={styles.inputWrapper}>
+              <InputText
+                name="password"
+                type="password"
+                placeholder="Password"
+              />
+              <ErrorMessage
+                name="password"
+                component="div"
+                className={styles.errorText}
+              />
+            </section>
+            <section className={styles.inputWrapper}>
+              <InputText
+                name="passwordConf"
+                type="password"
+                placeholder="Password Confirmation"
+              />
+              <ErrorMessage
+                name="passwordConf"
+                component="div"
+                className={styles.errorText}
+              />
+            </section>
           </section>
         </section>
-        <InputRadioWrapper name="role" type="radio" value="buyer">
-          <div className={styles.radioTextWrapper}>
-            <h3>Join As a Buyer</h3>
-            <h4>
-              I am looking for a Name, Logo or Tagline for my business, brand or
-              product.
-            </h4>
-          </div>
-        </InputRadioWrapper>
-        <InputRadioWrapper name="role" type="radio" value="seller">
-          <div className={styles.radioTextWrapper}>
-            <h3>Join As a Creative or Marketplace Seller</h3>
-            <h4>
-              I plan to submit name ideas, Logo designs or sell names in Domain
-              Marketplace.
-            </h4>
-          </div>
-        </InputRadioWrapper>
-        <button className={styles.submitBtn} type="submit" onSubmit={onSubmit}>
+        <section className={styles.inputWrapper}>
+          <InputRadioWrapper name="role" type="radio" value="buyer">
+            <div className={styles.radioTextWrapper}>
+              <h3>Join As a Buyer</h3>
+              <h4>
+                I am looking for a Name, Logo or Tagline for my business, brand
+                or product.
+              </h4>
+            </div>
+          </InputRadioWrapper>
+          <ErrorMessage
+            name="role"
+            component="div"
+            className={styles.errorText}
+          />
+        </section>
+        <section className={styles.inputWrapper}>
+          <InputRadioWrapper name="role" type="radio" value="seller" >
+            <div className={styles.radioTextWrapper}>
+              <h3>Join As a Creative or Marketplace Seller</h3>
+              <h4>
+                I plan to submit name ideas, Logo designs or sell names in
+                Domain Marketplace.
+              </h4>
+            </div>
+          </InputRadioWrapper>
+          <ErrorMessage
+            name="role"
+            component="div"
+            className={styles.errorText}
+          />
+        </section>
+        <button className={styles.submitBtn} type="submit">
           Create account
         </button>
       </Form>

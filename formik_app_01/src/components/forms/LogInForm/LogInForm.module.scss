@@ -3,11 +3,36 @@ form {
   flex-direction: column;
   justify-content: center;
 }
+.inputWrapper {
+  position: relative;
+}
 input {
   // ignored. why
   margin: auto;
   width: 600px;
   height: 50px;
+}
+.errorText {
+  position: absolute;
+  z-index: 2;
+  left: 50%;
+  bottom: -20px;
+  padding: 10px;
+  text-align: left;
+  font-size: x-small;
+  color: yellow;
+  background-color: rgba(0, 0, 0, 0.7);
+  border-radius: 12px;
+  animation-name: errorAppear;
+  animation-duration: 1s;
+  @keyframes errorAppear {
+    from {
+      color: #00aeff;
+    }
+    to {
+      color: yellow;
+    }
+  }
 }
 .submitBtn {
   margin: 20px auto;

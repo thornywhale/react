@@ -1,5 +1,5 @@
-import React from "react";
-import { Formik, Form } from "formik";
+import { React, API } from "react";
+import { Formik, Form, validateYupSchema, Field, ErrorMessage } from "formik";
 
 import { LOG_IN_SCHEME } from "../../../utils/validationSchemes.js";
 import InputText from "./../InputText";
@@ -10,7 +10,7 @@ const initialValues = {
   password: "",
 };
 
-const LogInForm = () => {
+const LogInForm = (props) => {
   const onSubmit = (values, formikBag) => {
     console.log(values);
     formikBag.resetForm();
@@ -22,10 +22,24 @@ const LogInForm = () => {
       validationSchema={LOG_IN_SCHEME}
     >
       <Form>
-        <InputText name="email" type="email" placeholder="Email Address" />
-        <InputText name="password" type="password" placeholder="Password" />
+        <section className={styles.inputWrapper}>
+          <InputText name="email" type="email" placeholder="Email Address" />
+          <ErrorMessage
+            name="email"
+            component="div"
+            className={styles.errorText}
+          />
+        </section>
+        <section className={styles.inputWrapper}>
+          <InputText name="password" type="password" placeholder="Password" />
+          <ErrorMessage
+            name="password"
+            component="div"
+            className={styles.errorText}
+          />
+        </section>
 
-        <button className={styles.submitBtn} type="submit" onSubmit={onSubmit}>
+        <button className={styles.submitBtn} type="submit">
           log in
         </button>
       </Form>
