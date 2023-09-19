@@ -1,11 +1,12 @@
-import React from "react";
+import React, { useContext } from "react";
 import { Link, useLocation } from "react-router-dom";
 import styles from "./Header.module.scss";
+import SwitchTheme from "../SwitchTheme";
+import { ThemeContext } from "../../contexts";
 // import logo from "./../../images/logo.png";
 
 const Header = (props) => {
-  // const location = useLocation();
-  // console.log(location);
+  // const [theme] = useContext(ThemeContext);
   const { pathname } = useLocation();
   return (
     <header>
@@ -21,6 +22,7 @@ const Header = (props) => {
           <button className={styles.headerBtn}>Sign up</button>
         </Link>
       )}
+      {/* <SwitchTheme /> */}
     </header>
   );
 };
