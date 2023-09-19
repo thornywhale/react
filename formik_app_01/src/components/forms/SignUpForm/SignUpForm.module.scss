@@ -44,6 +44,27 @@ input {
     }
   }
 }
+.radioErrorText {
+  position: absolute;
+  z-index: 2;
+  left: 50%;
+  padding: 10px;
+  text-align: left;
+  font-size: x-small;
+  color: yellow;
+  background-color: rgba(0, 0, 0, 0.7);
+  border-radius: 12px;
+  animation-name: errorAppear;
+  animation-duration: 1s;
+  @keyframes errorAppear {
+    from {
+      color: #00aeff;
+    }
+    to {
+      color: yellow;
+    }
+  }
+}
 label {
   margin: auto;
   display: flex;

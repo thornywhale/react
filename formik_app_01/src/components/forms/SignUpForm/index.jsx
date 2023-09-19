@@ -1,6 +1,6 @@
 import React from "react";
 import PropTypes from "prop-types";
-import { Formik, Form, ErrorMessage } from "formik";
+import { Formik, Form, Field, ErrorMessage } from "formik";
 
 import { SIGN_UP_SCHEME } from "../../../utils/validationSchemes";
 import InputText from "./../InputText";
@@ -20,7 +20,7 @@ const initialValues = {
 const SignUpForm = (props) => {
   const onSubmit = (values, formikBag) => {
     console.log(values);
-    formikBag.resetForm();
+    // formikBag.resetForm();
   };
   return (
     <Formik
@@ -105,36 +105,33 @@ const SignUpForm = (props) => {
             </section>
           </section>
         </section>
-        <section className={styles.inputWrapper}>
-          <InputRadioWrapper name="role" type="radio" value="buyer">
-            <div className={styles.radioTextWrapper}>
-              <h3>Join As a Buyer</h3>
-              <h4>
-                I am looking for a Name, Logo or Tagline for my business, brand
-                or product.
-              </h4>
-            </div>
-          </InputRadioWrapper>
+        <section>
+          <section className={styles.inputWrapper}>
+            <InputRadioWrapper name="role" type="radio" value="buyer">
+              <div className={styles.radioTextWrapper}>
+                <h3>Join As a Buyer</h3>
+                <h4>
+                  I am looking for a Name, Logo or Tagline for my business,
+                  brand or product.
+                </h4>
+              </div>
+            </InputRadioWrapper>
+          </section>
+          <section className={styles.inputWrapper}>
+            <InputRadioWrapper name="role" type="radio" value="seller">
+              <div className={styles.radioTextWrapper}>
+                <h3>Join As a Creative or Marketplace Seller</h3>
+                <h4>
+                  I plan to submit name ideas, Logo designs or sell names in
+                  Domain Marketplace.
+                </h4>
+              </div>
+            </InputRadioWrapper>
+          </section>
           <ErrorMessage
             name="role"
             component="div"
-            className={styles.errorText}
-          />
-        </section>
-        <section className={styles.inputWrapper}>
-          <InputRadioWrapper name="role" type="radio" value="seller" >
-            <div className={styles.radioTextWrapper}>
-              <h3>Join As a Creative or Marketplace Seller</h3>
-              <h4>
-                I plan to submit name ideas, Logo designs or sell names in
-                Domain Marketplace.
-              </h4>
-            </div>
-          </InputRadioWrapper>
-          <ErrorMessage
-            name="role"
-            component="div"
-            className={styles.errorText}
+            className={styles.radioErrorText}
           />
         </section>
         <button className={styles.submitBtn} type="submit">

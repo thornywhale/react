@@ -1,15 +1,20 @@
 import React from "react";
 import PropTypes from "prop-types";
-import { ErrorMessage, Field } from "formik";
+import { Field } from "formik";
 import styles from "./InputText.module.scss";
 
 const InputText = ({ name, ...options }) => {
   return (
     <Field name={name}>
       {({ field, meta }) => {
+        const { error } = meta;
         return (
           <section>
-            <input {...options} {...field}></input>
+            <input
+              className={error ? styles.errorInput : null}
+              {...options}
+              {...field}
+            ></input>
           </section>
         );
       }}

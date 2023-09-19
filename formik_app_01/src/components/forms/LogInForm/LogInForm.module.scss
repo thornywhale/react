@@ -6,12 +6,6 @@ form {
 .inputWrapper {
   position: relative;
 }
-input {
-  // ignored. why
-  margin: auto;
-  width: 600px;
-  height: 50px;
-}
 .errorText {
   position: absolute;
   z-index: 2;
@@ -46,6 +40,5 @@ input {
   font-weight: 900;
 }
 .submitBtn {
-  // temp
   width: 280px;
 }

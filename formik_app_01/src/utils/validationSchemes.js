@@ -43,6 +43,7 @@ export const SIGN_UP_SCHEME = Yup.object({
   lastName: NAME_SCHEME,
   displayName: USERNAME_SCHEME,
   role: Yup.string()
+    .trim()
     .oneOf(["buyer", "seller"])
     .required("⚠️ Choose who You are!"),
 });

@@ -14,10 +14,10 @@ const InputRadioWrapper = ({ name, value, children, ...options }) => {
         return (
           <label className={styles.radioLabel}>
             <input
-              className={styles.dot}
-              value={value}
               {...options}
               {...field}
+              className={styles.dot}
+              value={value}
             />
             {children}
           </label>
@@ -27,9 +27,15 @@ const InputRadioWrapper = ({ name, value, children, ...options }) => {
   );
 };
 
+InputRadioWrapper.defaultProps = {
+  name: "role",
+  type: "radio",
+};
+
 InputRadioWrapper.propTypes = {
   name: PropTypes.string.isRequired,
   value: PropTypes.string.isRequired,
+  type: PropTypes.string.isRequired,
   children: PropTypes.object,
 };
 

@@ -4,8 +4,6 @@ import styles from "./Header.module.scss";
 // import logo from "./../../images/logo.png";
 
 const Header = (props) => {
-  // const location = useLocation();
-  // console.log(location);
   const { pathname } = useLocation();
   return (
     <header>
