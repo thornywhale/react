@@ -1,0 +1,18 @@
+.btn {
+  width: 80px;
+  height: 20px;
+  margin: 0 2px;
+  background-color: rgba(42, 148, 95, 0.486);
+  border: none;
+  font-family: "Courier New", Courier, monospace;
+  font-size: large;
+  font-weight: 900;
+}
+.btn:disabled {
+  color: rgba(0, 0, 0, 0.247);
+  background-color: rgba(98, 190, 144, 0.081);
+  font-weight: 400;
+}
+.btn:enabled:hover {
+  background-color: rgba(75, 238, 157, 0.5);
+}
