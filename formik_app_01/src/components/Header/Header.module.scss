@@ -1,7 +1,9 @@
-header {
+.headerDiv {
   display: flex;
+  align-items: center;
   justify-content: space-between;
   margin: 40px;
+  height: 60px;
 }
 .headerBtn {
   width: 80px;
@@ -12,6 +14,7 @@ header {
   background-color: transparent;
   border: 1px solid white;
   border-radius: 5px;
+  cursor: pointer;
 }
 .headerBtn:hover {
   animation-name: stretchLeft;
