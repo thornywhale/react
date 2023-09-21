@@ -5,6 +5,17 @@
   margin: 40px;
   height: 60px;
 }
+.clickerWrapper{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 72px;
+  height: 38px;
+  padding: 0 8px;
+  border: 1px white;
+  border-style: dotted hidden;
+  color: white;
+}
 .headerBtn {
   width: 80px;
   height: 40px;

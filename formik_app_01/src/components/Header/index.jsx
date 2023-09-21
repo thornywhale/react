@@ -1,4 +1,5 @@
-import React, { useCallback, useContext, useEffect, useState } from "react";
+import React, { useContext } from "react";
+import { useClicker } from "../../hooks";
 import { Link, useLocation } from "react-router-dom";
 import styles from "./Header.module.scss";
 import SwitchTheme from "./../SwitchTheme";
@@ -17,9 +18,20 @@ const Header = () => {
   return (
     <div>
       <div style={styleMap[theme]} className={styles.headerDiv}>
-        <Link to="/">
-          <img src="/logo.png" alt="squardhelp logo" />
-        </Link>
+        <div
+          style={{
+            width: "30%",
+            display: "flex",
+            justifyContent: "space-around",
+          }}
+        >
+          <Link to="/">
+            <img src="/logo.png" alt="squardhelp logo" />
+          </Link>
+          <div className={styles.clickerWrapper}>
+            <p>clicks: {useClicker()}</p>
+          </div>
+        </div>
         <div
           style={{
             width: "20%",
