@@ -15,6 +15,8 @@ import UsersBlock from "./pages/LoaderPage/UsersBlock";
 import EventsBlock from "./pages/LoaderPage/EventsBlock";
 import ProductsBlock from "./pages/LoaderPage/ProductsBlock";
 import Page404 from "./pages/Page404";
+import Chat from "./components/Chat";
+import UsersLoader from './components/UsersLoader/index';
 
 const App = (props) => {
   const { theme, changeTheme } = useTheme(THEMES.LIGHT);
@@ -35,6 +37,8 @@ const App = (props) => {
             <Route path="/" element={<Home />} />
             <Route path="/log-in" element={<LogInPage />} />
             <Route path="/sign-up" element={<SignUpPage />} />
+            <Route path="/chat" element={<Chat />} />
+            <Route path="/users" element={<UsersLoader />} />
             <Route path="/loader/" element={<LoaderPage />}>
               <Route path="users" element={<UsersBlock />} />
               <Route path="events" element={<EventsBlock />} />

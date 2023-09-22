@@ -1,0 +1,42 @@
+{
+  "messages": [
+    {
+      "id": 1,
+      "body": "text 1",
+      "authorId": 1
+    },
+    {
+      "id": 2,
+      "body": "text 2",
+      "authorId": 2
+    },
+    {
+      "id": 8,
+      "body": "text 8",
+      "authorId": 3
+    },
+    {
+      "id": 14,
+      "body": "text 14",
+      "authorId": 4
+    }
+  ],
+  "users": [
+    {
+      "id": 1,
+      "username": "bob22"
+    },
+    {
+      "id": 2,
+      "username": "bib100"
+    },
+    {
+      "id": 6,
+      "username": "beep1000"
+    },
+    {
+      "id": 33,
+      "username": "beep2000"
+    }
+  ]
+}

@@ -11,6 +11,7 @@ const UsersLoader = (props) => {
     error,
     isFetching,
     currentPage,
+    // eslint-disable-next-line
     currentResults,
     prevPage,
     nextPage,
@@ -23,11 +24,11 @@ const UsersLoader = (props) => {
     <section>
       <h2>'Users': 'Користувачі'</h2>
       <div>
-        <button onClick={this.prevPage} disabled={currentPage === 1}>
+        <button onClick={prevPage} disabled={currentPage === 1}>
           &lt; prev
         </button>
         <span>&nbsp;{currentPage}&nbsp;</span>
-        <button onClick={this.nextPage}>next &gt;</button>
+        <button onClick={nextPage}>next &gt;</button>
       </div>
       <ul>
         {isFetching && <Spinner />}

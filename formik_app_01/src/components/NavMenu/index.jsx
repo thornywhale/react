@@ -7,6 +7,9 @@ const NavMenu = (props) => {
     <nav className={styles.navDiv}>
       <ul className={styles.navlist}>
         <li>
+          <NavLink to="/chat">chat</NavLink>
+        </li>
+        <li>
           <NavLink to="/users">users</NavLink>
         </li>
         <li>

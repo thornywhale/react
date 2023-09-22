@@ -1,5 +1,5 @@
-import queryString from 'query-string';
-import { API } from '../constants';
+import queryString from "query-string";
+import { API } from "../constants";
 
 /**
  *
@@ -24,8 +24,10 @@ export const getUsers = (options = {}) => {
 
 const myFetch = (url) => fetch(url).then((res) => res.json());
 
-export const getUsersJSON = () => myFetch('/data/users.json');
+export const getUsersJSON = () => myFetch("/data/users.json");
 
-export const getEventsJSON = () => myFetch('/data/events.json');
+export const getEventsJSON = () => myFetch("/data/events.json");
 
-export const getProductsJSON = () => myFetch('/data/products.json');
+export const getProductsJSON = () => myFetch("/data/products.json");
+
+export const getChatJSON = () => myFetch("/data/chat.json");

@@ -1,7 +1,7 @@
 import React from "react";
 import Error from "../Error";
 import Spinner from "../Spinner";
-import {getUsersJSON}  from "../../api";
+import { getUsersJSON } from "../../api";
 import useLoaderData from "../../hooks/useLoaderData";
 
 const ViewEvents = (props) => {

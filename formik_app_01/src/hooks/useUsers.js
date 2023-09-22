@@ -5,6 +5,7 @@ const useUsers = (getUsers) => {
   const [error, setError] = useState(null);
   const [isFetching, setIsFetching] = useState(false);
   const [currentPage, setCurrentPage] = useState(1);
+  // eslint-disable-next-line
   const [currentResults, setCurrentResults] = useState(5);
 
   const prevPage = () => {
