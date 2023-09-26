@@ -1,15 +1,11 @@
-import React from 'react';
-import { NavLink, Outlet } from 'react-router-dom';
-// import { getUsersJSON, getEventsJSON, getProductsJSON } from '../../api';
-// import LoaderData from '../../components/LoaderData';
-// import ViewUsers from '../../components/ViewUsers';
-// import ViewEvents from '../../components/ViewEvents';
-// import ViewProducts from '../../components/ViewProducts';
+import React from "react";
+import { NavLink, Outlet } from "react-router-dom";
+import styles from "./LoaderPage.module.scss";
 
 const LoaderPage = () => {
   return (
     <>
-      <ul>
+      <ul className={styles.loaderList}>
         <li>
           <NavLink to="/loader/users">Users</NavLink>
         </li>

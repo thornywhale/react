@@ -1,5 +1,6 @@
 import React from "react";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
+
 import { ThemeContext, UserContext } from "./contexts";
 import { useAuthUser, useTheme } from "./hooks";
 
@@ -15,8 +16,9 @@ import UsersBlock from "./pages/LoaderPage/UsersBlock";
 import EventsBlock from "./pages/LoaderPage/EventsBlock";
 import ProductsBlock from "./pages/LoaderPage/ProductsBlock";
 import Page404 from "./pages/Page404";
+
 import Chat from "./components/Chat";
-import UsersLoader from './components/UsersLoader/index';
+import UsersLoader from "./components/UsersLoader/index";
 
 const App = (props) => {
   const { theme, changeTheme } = useTheme(THEMES.LIGHT);

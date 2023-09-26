@@ -39,3 +39,8 @@ export const LANG = {
   ENG: "Eng",
   UKR: "Ukr",
 };
+
+export const STATUS_MENU = {
+  OPEN: "OPEN",
+  CLOSE: "CLOSE",
+};

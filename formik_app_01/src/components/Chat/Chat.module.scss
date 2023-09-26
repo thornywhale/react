@@ -1,0 +1,42 @@
+@use "/src/common/styles/colors" as *;
+
+.chatDiv {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: $colorBg01;
+  .contentDiv:nth-child(odd) > p {
+    text-align: right;
+  }
+  .contentDiv:nth-child(odd) {
+    margin-left: 25vw;
+  }
+  .contentDiv:nth-child(even) > p {
+    text-align: left;
+  }
+  .contentDiv:nth-child(even) {
+    margin-right: 25vw;
+  }
+}
+
+.contentDiv {
+  width: 60%;
+  padding: 10px;
+  h3 {
+    padding: 10px;
+    text-align: justify;
+    font-style: italic;
+    color: white;
+    border: 1px solid white;
+  }
+  p {
+    margin: 0;
+    padding: 2px 10px;
+    font-size: larger;
+    color: white;
+  }
+  &:hover > h3,
+  &:hover > p {
+    color: $colorBright01;
+  }
+}

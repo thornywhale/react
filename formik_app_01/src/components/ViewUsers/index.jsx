@@ -3,6 +3,7 @@ import Error from "../Error";
 import Spinner from "../Spinner";
 import { getUsersJSON } from "../../api";
 import useLoaderData from "../../hooks/useLoaderData";
+import styles from "./ViewUsers.module.scss";
 
 const ViewUsers = (props) => {
   const { data, isFetching, error } = useLoaderData(getUsersJSON);
@@ -10,7 +11,7 @@ const ViewUsers = (props) => {
     return <Error />;
   }
   return (
-    <div>
+    <div className={styles.contentDiv}>
       {isFetching && <Spinner />}
       {isFetching || data.map(({ id, name }) => <p key={id}>{name}</p>)}
     </div>

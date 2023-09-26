@@ -45,7 +45,7 @@ const StopWatchHooks = () => {
         border: "4px solid black",
         margin: "20px",
         textAlign: "center",
-        backgroundColor: "rgba(128, 128, 128, 0.7)",
+        backgroundColor: "rgb(128, 128, 128)",
       }}
     >
       <h3>time: {format(time, "mm:ss")}</h3>

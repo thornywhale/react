@@ -1,0 +1,13 @@
+@use "/src/common/styles/colors" as *;
+
+.loaderList {
+  color: white;
+  background-color: $colorBg01;
+  list-style-type: none;
+  > li {
+    text-align: left;
+    &:hover {
+      color: $colorBright01;
+    }
+  }
+}

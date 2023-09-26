@@ -4,7 +4,7 @@ import ViewUsers from "../../components/ViewUsers";
 const UsersBlock = () => {
   return (
     <>
-      <h2>Users:</h2>
+      <h2 style={{ color: "white" }}>Users:</h2>
       <ViewUsers />
     </>
   );

@@ -1,0 +1,22 @@
+@use "/src/common/styles/colors" as *;
+
+.contentDiv {
+  padding: 20px;
+  background-color: $colorBg01;
+  li {
+    list-style-type: none;
+    text-align: left;
+    h3 {
+      width: fit-content;
+      color: white;
+      border: 1px white;
+      border-style: hidden hidden solid hidden;
+      font-size: x-large;
+      font-variant: small-caps;
+    }
+    p {
+      padding: 2px;
+      color: white;
+    }
+  }
+}

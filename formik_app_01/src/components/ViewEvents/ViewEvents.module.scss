@@ -1,0 +1,17 @@
+@use "/src/common/styles/colors" as *;
+
+.contentDiv {
+  padding: 20px;
+  background-color: $colorBg01;
+  h3 {
+    margin: 0;
+    color: white;
+  }
+  h4 {
+    width: fit-content;
+    padding: 2px;
+    color: white;
+    border: 1px white;
+    border-style: hidden hidden solid hidden;
+  }
+}

@@ -1,0 +1,19 @@
+@use "/src/common/styles/colors" as *;
+
+.contentDiv {
+  padding: 10px;
+  background-color: $colorBg01;
+  display: flex;
+  justify-content: space-evenly;
+  p {
+    margin: 0;
+    padding: 2px 10px;
+    color: white;
+    border: 1px solid white;
+    &:hover {
+      color: $colorBright01;
+      border: 1px solid $colorBright01;
+      cursor: grab;
+    }
+  }
+}

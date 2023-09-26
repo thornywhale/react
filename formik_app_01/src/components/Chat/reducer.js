@@ -18,6 +18,7 @@ const reducer = (state, action) => {
         users,
         messages: messagesWithAuthor,
         isFetching: false,
+        error: null,
       };
       return newState;
     }
@@ -32,6 +33,7 @@ const reducer = (state, action) => {
       return {
         ...state,
         isFetching: true,
+        error: null,
       };
     }
     default:

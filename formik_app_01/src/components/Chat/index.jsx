@@ -3,7 +3,8 @@ import reducer from "./reducer";
 import ACTION_TYPES from "./actionTypes";
 import Spinner from "../Spinner";
 import Error from "../Error";
-import { getChatJSON } from "../../api/index";
+import { getChatJSON } from "../../api";
+import styles from "./Chat.module.scss";
 
 const Chat = () => {
   const [state, dispatch] = useReducer(reducer, {
@@ -16,8 +17,6 @@ const Chat = () => {
   useEffect(() => {
     dispatch({ type: ACTION_TYPES.DATA_IS_FETCHING });
     getChatJSON()
-      // fetch("/data/chat.json")
-      .then((response) => response.json())
       .then((data) =>
         dispatch({
           type: ACTION_TYPES.DATA_SUCCESS,
@@ -38,14 +37,18 @@ const Chat = () => {
 
   return (
     <section>
-      <h2>Chat</h2>
-      {state.isFetching && <Spinner />}
-      {state.messages.map((msg) => (
-        <article key={msg.id}>
-          <h3>{msg.body}</h3>
-          <p>author: {msg.author.username}</p>
-        </article>
-      ))}
+      <h2 style={{ color: "white" }}>Chat</h2>
+      <div className={styles.chatDiv}>
+        {state.isFetching && <Spinner />}
+        {state.messages.map((msg) => (
+          <article key={msg.id} className={styles.contentDiv}>
+            <h3>{msg.body}</h3>
+            <p>
+              <em>author:</em> {msg.author.username}
+            </p>
+          </article>
+        ))}
+      </div>
     </section>
   );
 };

@@ -1,8 +1,10 @@
+@use "/src/common/styles/colors" as *;
+
 .btn {
   width: 80px;
   height: 20px;
   margin: 0 2px;
-  background-color: rgba(42, 148, 95, 0.486);
+  background-color: $colorBg01;
   border: none;
   font-family: "Courier New", Courier, monospace;
   font-size: large;

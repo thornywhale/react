@@ -4,7 +4,7 @@ import ViewEvents from "../../components/ViewEvents";
 const EventsBlock = () => {
   return (
     <>
-      <h2>Events:</h2>
+      <h2 style={{ color: "white" }}>Events:</h2>
       <ViewEvents />
     </>
   );

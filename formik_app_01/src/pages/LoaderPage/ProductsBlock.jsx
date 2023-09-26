@@ -4,7 +4,7 @@ import ViewProducts from "../../components/ViewProducts";
 const ProductsBlock = () => {
   return (
     <>
-      <h2>Products:</h2>
+      <h2 style={{ color: "white" }}>Products:</h2>
       <ViewProducts />
     </>
   );
